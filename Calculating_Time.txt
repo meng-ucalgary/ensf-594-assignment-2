@@ -1,0 +1,11 @@
+//code snippet to calculate time
+
+public static void main(String[] args) {
+    CalculateTime obj = new CalculateTime(100000);
+
+    long start = System.currentTimeMillis();
+    obj.insertionSort();
+    long end = System.currentTimeMillis();
+
+    System.out.println("Sorting time: " + (end - start) + " ms");
+}
