@@ -1,0 +1,39 @@
+Determine the time of all four algorithm of each best, worst and average case on the following input.
+
+For example:
+
+Input size 10:   ( 2 marks)
+
+Best case of Insertion sort:
+Best case of bubble sort:
+Best case of merge sort:
+Best case of quick sort:
+
+Worst case of insertion sort:
+Worst case of bubble sort:
+Worst case of merge sort:
+Worst case of quick sort:
+
+Average case of insertion sort:
+Average case of bubble sort:
+Average case of merge sort:
+Average case of quick sort:
+
+
+You will do the same for the remaining inputs: 100, 1000, 10,000, 100,000, and 1,000,000 ( 2 * 5 = 10)
+
+To get the above values, you need to run your code multiple times by changing the size, order and sort mechanism. 
+
+You can open any doc or spreadsheet file and record those values there. The best is to create those tables in Excel
+
+Now, you have values ranging from 10 to 100000 (before 10000, if you get infinity value). Make a graph using these valuues.
+
+A graph showing the best case comparison of all the four sorts  (2 marks)
+A graph showing the worst case comparison of all the four sorts (2 marks)
+A graph showing the average (random) case comparison of all the four sorts (2 marks)
+
+Also give 2 - 3 lines description of each graph ( we have total 3 graphs each description has 2 marks)
+
+Conclusions of ther analysis (1 marks)
+
+
