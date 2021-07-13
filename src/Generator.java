@@ -16,9 +16,9 @@ public class Generator {
     public static int[] getRandomArray(int size) {
         int arr[] = new int[size];
 
-        // using seed = 100 to get same random numbers
-        Random r = new Random(100);
-        Random digits = new Random(100);
+        // using seed = size to get same random numbers for the same size of array
+        Random r = new Random(size);
+        Random digits = new Random(size);
 
         // fill the array with random numbers
         for (int i = 0; i < size; i++) {
@@ -30,23 +30,14 @@ public class Generator {
     }
 
     /**
-     * Creates a sorted array of size <code>size</code> filled with random numbers in ascending order
+     * Creates a sorted array of size <code>size</code> filled with random numbers
+     * in ascending order
      *
      * @param size the size of the array
      * @return the generated array
      */
     public static int[] getSortedArray(int size) {
-        int arr[] = new int[size];
-
-        // using seed = 100 to get same random numbers
-        Random r = new Random(100);
-        Random digits = new Random(100);
-
-        // fill the array with random numbers
-        for (int i = 0; i < size; i++) {
-            int multiplier = (int) Math.pow(10, (digits.nextInt(5) + 2));
-            arr[i] = (int) (r.nextDouble() * multiplier);
-        }
+        int arr[] = Generator.getRandomArray(size);
 
         Arrays.sort(arr);
 
@@ -54,30 +45,19 @@ public class Generator {
     }
 
     /**
-     * Creates a sorted array of size <code>size</code> filled with random numbers in descending order
+     * Creates a sorted array of size <code>size</code> filled with random numbers
+     * in descending order
      *
      * @param size the size of the array
      * @return the generated array
      */
     public static int[] getReverseSortedArray(int size) {
-        int arr[] = new int[size];
-
-        // using seed = 100 to get same random numbers
-        Random r = new Random(100);
-        Random digits = new Random(100);
-
-        // fill the array with random numbers
-        for (int i = 0; i < size; i++) {
-            int multiplier = (int) Math.pow(10, (digits.nextInt(5) + 2));
-            arr[i] = (int) (r.nextDouble() * multiplier);
-        }
-
-        Arrays.sort(arr);
+        int arr[] = Generator.getSortedArray(size);
 
         int arrReverse[] = new int[size];
 
-        for(int i=0; i<size; i++) {
-            arrReverse[i] = arr[size-i-1];
+        for (int i = 0; i < size; i++) {
+            arrReverse[i] = arr[size - i - 1];
         }
 
         return arrReverse;
