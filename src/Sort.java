@@ -25,6 +25,31 @@ public class Sort {
     }
 
     /**
+     * Sorts the <code>arr</code> inplace using Insertion Sort
+     *
+     * @param arr an integer array which is to be sorted in ascending order
+     */
+    public static void insertionSort(int[] arr) {
+        int n = arr.length;
+
+        for (int i = 1; i < n; i++) {
+            // item is the element that needs to be put in sorted left half
+            int item = arr[i];
+
+            // j is the max index till where arrays are sorted
+            int j = i - 1;
+
+            // loop to make space for 'item' to be inserted at correct position
+            while (j >= 0 && arr[j] > item) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+
+            arr[j + 1] = item;
+        }
+    }
+
+    /**
      * Merges two sorted subarrays of an array <code>arr</code> to form bigger
      * sorted subarray. First subarray extends from [low, mid] and second subarray
      * extends from (mid, high]
