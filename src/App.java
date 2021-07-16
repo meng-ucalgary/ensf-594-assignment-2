@@ -234,21 +234,29 @@ public class App {
                 else if (temp.trim().equalsIgnoreCase("quick")) {
                     this.algorithm = "quick";
 
-                    // capture start time
-                    long startTime = System.nanoTime();
+                    try {
+                        // capture start time
+                        long startTime = System.nanoTime();
 
-                    // sort using quick sort
-                    Sort.quickSort(inputArr);
+                        // sort using quick sort
+                        Sort.quickSort(inputArr);
 
-                    // capture stop time
-                    long stopTime = System.nanoTime();
+                        // capture stop time
+                        long stopTime = System.nanoTime();
 
-                    double elapsedTime = (double) (stopTime - startTime) / 1_000_000;
+                        double elapsedTime = (double) (stopTime - startTime) / 1_000_000;
 
-                    // report the time taken
-                    System.out.printf("[%s] Time taken for %s sort = %s milliseconds%n",
-                            ColorText.text("INFO", Color.BLUE), this.algorithm,
-                            ColorText.text(String.format("%.5f", elapsedTime), Color.GREEN));
+                        // report the time taken
+                        System.out.printf("[%s] Time taken for %s sort = %s milliseconds%n",
+                                ColorText.text("INFO", Color.BLUE), this.algorithm,
+                                ColorText.text(String.format("%.5f", elapsedTime), Color.GREEN));
+                    }
+
+                    catch (StackOverflowError e) {
+                        System.err.printf("[%s] Stack Overflow. Could not measure time%n",
+                                ColorText.text("FAIL", Color.RED));
+                        Runtime.getRuntime().exit(1);
+                    }
 
                     break;
                 }
