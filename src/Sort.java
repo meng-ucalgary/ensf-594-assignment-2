@@ -66,7 +66,7 @@ public class Sort {
         int[] rightHalf = new int[high - mid];
 
         // copy lower half into auxiliary space
-        for (int i = 0; i <= leftHalf.length; i++) {
+        for (int i = 0; i < leftHalf.length; i++) {
             leftHalf[i] = arr[i + low];
         }
 
