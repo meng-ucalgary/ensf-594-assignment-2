@@ -1,6 +1,6 @@
 # Comparison of Sorting Algorithms
 
-We always do the recommended asymptomatic analysis for the sorting algorithms. This command line project aims to do an empirical analysis of a few sorting algorithms.
+This command line project aims to do an empirical analysis of a few sorting algorithms.
 
 
 
