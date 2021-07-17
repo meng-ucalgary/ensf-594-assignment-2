@@ -1,17 +1,19 @@
 # Comparison of Sorting Algorithms
 
-We always do the recommended asymptomatic analysis for the sorting algorithms. This command line program aims to do a quick emphirical analysis of a few sorting algorithms.
+We always do the recommended asymptomatic analysis for the sorting algorithms. This command line project aims to do an empirical analysis of a few sorting algorithms.
 
 
 
 ## How it works
 
-+ The program asks for the ordering of input array. Acceptable values are
+1. User launches the program
+
+1. The program asks for the ordering of input array. Acceptable values are listed below.
    + ascending
    + descending
    + random
 
-+ Then it asks the size of the input array. Empty arrays and negative sizes are not allowed. For demonstration, following sizes are used
+1. Then the program asks for the size of the input array. Empty arrays and negative sizes are not allowed. For demonstration in this project, following sizes are used
    + 10
    + 100
    + 1000
@@ -19,17 +21,17 @@ We always do the recommended asymptomatic analysis for the sorting algorithms. T
    + 100,000
    + 1,000,000
 
-+ Once ordering of input array and size are available, the program will generate the input array. For reference, this array would be stored in the directory [output/](outputs/), and the exact file name will be displayed
+1. Once ordering of input array and size are available, the program will generate the input array. For reference, this array would be stored in the directory [outputs/](outputs/), and the exact file name will be displayed. For integrity reasons, an exactly same array is generated for a given ordering and size on a given system.
 
-+ Then the program asks for the algorithm to sort the input array generated. Accepted values are 
+1. Then the program asks for the algorithm to sort the generated array. Accepted values are
    + bubble - for sorting with Bubble Sort
    + insertion - for sorting with Insertion Sort
    + merge - for sorting with Merge Sort
    + quick - for sorting with Quick Sort
 
-+ After the sorting completes, the program spits out the time (in milliseconds) it took to sort the input array. This time is captured manually in the file [Tables_and_Graphs.xlsx](Tables_and_Graphs.xlsx).
+1. After the sorting completes, the program spits out the time (in milliseconds) it took to sort the input array. This time is captured manually in the file [Tables_and_Graphs.xlsx](Tables_and_Graphs.xlsx) in an appropriate table.
 
-+ Finally the programs asks to save the sorted array in a file. The file would always be saved with `.txt` extension, and cannot contain special characters. The exact file name of the output file is displayed.
+1. Finally the programs asks to save the sorted array in a file. The file would always be saved with `.txt` extension, and cannot contain special characters. The exact file name of the output file is displayed after it has been saved.
 
 
 
